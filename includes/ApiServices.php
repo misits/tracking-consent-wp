@@ -28,12 +28,12 @@ class ApiServices
     public static function get_settings()
     {
         $theme = array(
-            "background_color" => get_option("wp_tracking_consent_theme_background_color", "#ffffff"),
-            "text_color" => get_option("wp_tracking_consent_theme_text_color", "#000000"),
-            "primary_color" => get_option("wp_tracking_consent_theme_primary_color", "#000000"),
-            "banner_class" => get_option("wp_tracking_consent_theme_banner_class", ""),
-            "button_class" => get_option("wp_tracking_consent_theme_button_class", ""),
-            "radius" => get_option("wp_tracking_consent_theme_radius", "0"),
+            "background_color" => get_option("wp_tracking_consent_background_color", "#ffffff"),
+            "text_color" => get_option("wp_tracking_consent_text_color", "#000000"),
+            "primary_color" => get_option("wp_tracking_consent_primary_color", "#000000"),
+            "banner_class" => get_option("wp_tracking_consent_banner_class", ""),
+            "button_class" => get_option("wp_tracking_consent_button_class", ""),
+            "radius" => get_option("wp_tracking_consent_radius", "0"),
         );
 
         $consent = array(
