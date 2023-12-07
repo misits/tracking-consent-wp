@@ -1,0 +1,114 @@
+# Copyright (C) 2023 Martin IS IT Services
+# This file is distributed under the same license as the WP Tracking Consent plugin.
+msgid ""
+msgstr ""
+"Project-Id-Version: WP Tracking Consent 1.0\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/wp-tracking-"
+"consent\n"
+"Last-Translator: \n"
+"Language-Team: English (United States)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2023-12-06T15:41:46+00:00\n"
+"PO-Revision-Date: 2023-12-06 20:42+0000\n"
+"X-Generator: Loco https://localise.biz/\n"
+"X-Domain: wp-tracking-consent\n"
+"\n"
+"Language: en_US\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Loco-Version: 2.6.6; wp-6.4.1"
+
+#. Plugin Name of the plugin
+msgid "WP Tracking Consent"
+msgstr ""
+
+#. Description of the plugin
+msgid "Adds Matomo tracking code with consent functionality and more."
+msgstr ""
+
+#. Author of the plugin
+msgid "Martin IS IT Services"
+msgstr ""
+
+#: admin/AdminServices.php:56
+msgid "Matomo"
+msgstr ""
+
+#: admin/AdminServices.php:57
+msgid "Settings"
+msgstr ""
+
+#: admin/AdminServices.php:58
+msgid "Theme"
+msgstr ""
+
+#: admin/AdminServices.php:143
+msgid "Token auth"
+msgstr ""
+
+#: admin/AdminServices.php:151
+msgid "Site ID"
+msgstr ""
+
+#: admin/AdminServices.php:159
+msgid "Matomo URL"
+msgstr ""
+
+#: admin/AdminServices.php:167
+msgid "Description"
+msgstr ""
+
+#: admin/AdminServices.php:175
+msgid "Accept Button Text"
+msgstr ""
+
+#: admin/AdminServices.php:183
+msgid "Decline Button Text"
+msgstr ""
+
+#: admin/AdminServices.php:191
+msgid "Read More Page"
+msgstr ""
+
+#: admin/AdminServices.php:214
+msgid "Background Color"
+msgstr ""
+
+#: admin/AdminServices.php:222
+msgid "Text Color"
+msgstr ""
+
+#: admin/AdminServices.php:230
+msgid "Primary Color"
+msgstr ""
+
+#: admin/AdminServices.php:238
+msgid "Banner Class"
+msgstr ""
+
+#: admin/AdminServices.php:246
+msgid "Button Class"
+msgstr ""
+
+#: admin/AdminServices.php:254
+msgid "Radius"
+msgstr ""
+
+#: admin/AdminServices.php:265 includes/ApiServices.php:43
+msgid ""
+"We use cookies to ensure that we give you the best experience on our website."
+" If you continue to use this site we will assume that you are happy with it."
+msgstr ""
+
+#: admin/AdminServices.php:287 includes/ApiServices.php:41
+msgid "Accept"
+msgstr ""
+
+#: admin/AdminServices.php:296 includes/ApiServices.php:42
+msgid "Decline"
+msgstr ""
+
+#: admin/AdminServices.php:305
+msgid "Select a page"
+msgstr ""

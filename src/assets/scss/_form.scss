@@ -1,0 +1,87 @@
+#wp-tracking-consent-front {
+    position: fixed;
+    bottom: 0;
+    margin: var(--space-4);
+    padding: var(--space-4);
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    border-radius: var(--consent-radius, 0);
+    max-width: var(--phone);
+    background-color: var(--color-background, #fff);
+    color: var(--color-text, #000);
+    opacity: 0;  // Initially not visible
+    transform: translateY(110%); // Start below its final position
+    transition: opacity 0.5s ease, transform 0.5s ease; // Animation effect
+
+    &.visible {
+        opacity: 1; // Fully visible
+        transform: translateY(0); // Move to final position
+    }
+
+    &.hidden {
+        opacity: 0; // Fully invisible
+        transform: translateY(110%); // Move below its final position
+    }
+
+    &.none {
+        display: none; // Hide consent form
+    }
+
+    .consent-form {
+        display: flex;
+        flex-direction: column;
+
+        &__description {
+            p {
+                margin-top: 0;
+                max-width: 300px;
+            }
+        }
+
+        &__actions {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            margin-top: var(--space-4);
+
+
+            .button {
+                margin-right: var(--space-2);
+                border: 1px solid var(--color-primary, #000);
+                color: var(--white-color);
+                background-color: var(--color-primary, #000);
+                border-radius: var(--consent-radius, 0);
+                padding: var(--space-1) var(--space-3); 
+                font-size: var(--font-size-sm);
+                cursor: pointer;
+                transition: color 0.2s var(--ease), background-color 0.2s var(--ease);
+
+                &:hover {
+                    background-color: var(--white-color);
+                    color: var(--color-primary, #000);
+                }
+
+                // invert colors for secondary button
+                &--secondary {
+                    border: 1px solid var(--color-text, #000);
+                    color: var(--color-text, #000);
+                    background-color: var(--white-color);
+
+                    &:hover {
+                        background-color: var(--color-text, #000);
+                        color: var(--white-color);
+                    }
+                }
+
+                &--icon {
+                    display: flex;
+                    align-items: center;
+                    text-decoration: none;
+
+                    svg {
+                        margin-left: var(--space-1);
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,359 @@
+// Ease
+$ease: (
+  // Easings
+  ease: ease-in-out,
+  bezier: cubic-bezier(0.175, 0.885, 0.32, 1.275),
+  bezier-check: cubic-bezier(0.65, 0.25, 0.56, 0.96)
+);
+
+// Fonts
+$fonts: (
+  // Fonts
+  font-black: 900,
+  font-extrabold: 800,
+  font-weight-bold: 700,
+  font-weight-semibold: 600,
+  font-weight-medium: 500,
+  font-weight-regular: 400,
+  font-weight-light: 300,
+  font-weight-extra-light: 200,
+  font-weight-thin: 100,
+  font-size: 16px,
+  line-height: 1.1,
+  text-xs: 0.75rem,
+  text-sm: 0.875rem,
+  text-base: 1rem,
+  text-lg: 1.125rem,
+  text-xl: 1.25rem,
+  text-2xl: 1.5rem,
+  text-3xl: 1.875rem,
+  text-4xl: 2.25rem,
+  text-5xl: 3rem,
+  text-6xl: 3.75rem,
+  text-7xl: 4.5rem,
+  text-8xl: 6rem,
+  text-9xl: 8rem,
+);
+
+// Breackpoints
+$breakpoints: (
+  // Breakpoints
+  global-grid: 1280px,
+  large: 1400px,
+  desktop: 1280px,
+  medium: 1124px,
+  tablet: 860px,
+  small: 600px,
+  phone: 400px
+);
+
+$large: 1400px;
+$desktop: 1280px;
+$medium: 1124px;
+$tablet: 860px;
+$small: 600px;
+$phone: 400px;
+
+// Blur
+$blur: (
+  // Blur
+  blur: blur(8px),
+  blur-sm: blur(4px),
+  blur-md: blur(12px),
+  blur-lg: blur(16px),
+  blur-xl: blur(24px),
+  blur-2xl: blur(40px),
+  blur-3xl: blur(64px),
+  blur-none: blur(0)
+);
+
+// Rotate
+$rotate: (
+  // Rotate
+  rotate-0: rotate(0deg),
+  rotate-1: rotate(1deg),
+  rotate-2: rotate(2deg),
+  rotate-3: rotate(3deg),
+  rotate-6: rotate(6deg),
+  rotate-12: rotate(12deg),
+  rotate-45: rotate(45deg),
+  rotate-90: rotate(90deg),
+  rotate-180: rotate(180deg),
+  rotate-270: rotate(270deg)
+);
+
+// Spacing
+$spacing: (
+  // Spacing
+  space-0: 0,
+  space-0-5: 0.125rem,
+  space-1: 0.25rem,
+  space-1-5: 0.375rem,
+  space-2: 0.5rem,
+  space-2-5: 0.625rem,
+  space-3: 0.75rem,
+  space-3-5: 0.875rem,
+  space-4: 1rem,
+  space-5: 1.25rem,
+  space-6: 1.5rem,
+  space-7: 1.75rem,
+  space-8: 2rem,
+  space-9: 2.25rem,
+  space-10: 2.5rem,
+  space-11: 2.75rem,
+  space-12: 3rem,
+  space-14: 3.5rem,
+  space-16: 4rem,
+  space-20: 5rem,
+  space-24: 6rem,
+  space-28: 7rem,
+  space-32: 8rem,
+  space-36: 9rem,
+  space-40: 10rem,
+  space-44: 11rem,
+  space-48: 12rem,
+  space-52: 13rem,
+  space-56: 14rem,
+  space-60: 15rem,
+  space-64: 16rem,
+  space-72: 18rem,
+  space-80: 20rem,
+  space-96: 24rem,
+  space-px: 1px,
+  space-auto: 0 auto,
+  // Grid
+  global-grid: 1280px,
+  global-margin: 20px
+);
+
+// Radius
+$radius: (
+  // Radius
+  radius: 0.25rem,
+  radius-sm: 0.125rem,
+  radius-md: 0.375rem,
+  radius-lg: 0.5rem,
+  radius-xl: 0.75rem,
+  radius-2xl: 1rem,
+  radius-3xl: 1.5rem,
+  radius-full: 9999px
+);
+
+// Shadows
+$shadows: (
+  // Shadow
+  shadow: drop-shadow(0 1px 2px rgb(0 0 0 / 0.1))
+    drop-shadow(0 1px 1px rgb(0 0 0 / 0.06)),
+  shadow-sm: drop-shadow(0 1px 1px rgb(0 0 0 / 0.05)),
+  shadow-md: drop-shadow(0 4px 3px rgb(0 0 0 / 0.07))
+    drop-shadow(0 2px 2px rgb(0 0 0 / 0.06)),
+  shadow-lg: drop-shadow(0 10px 8px rgb(0 0 0 / 0.04))
+    drop-shadow(0 4px 3px rgb(0 0 0 / 0.1)),
+  shadow-xl: drop-shadow(0 20px 13px rgb(0 0 0 / 0.03))
+    drop-shadow(0 8px 5px rgb(0 0 0 / 0.08)),
+  shadow-2xl: drop-shadow(0 25px 25px rgb(0 0 0 / 0.15)),
+  shadow-none: drop-shadow(0 0 #0000)
+);
+
+// Colors
+$colors: (
+  // Gray
+  gray-50: rgb(249, 250, 251),
+  gray-100: rgb(243, 244, 246),
+  gray-200: rgb(229, 231, 235),
+  gray-300: rgb(209, 213, 219),
+  gray-400: rgb(156, 163, 175),
+  gray-500: rgb(107, 114, 128),
+  gray-600: rgb(75, 85, 99),
+  gray-700: rgb(55, 65, 81),
+  gray-800: rgb(31, 41, 55),
+  gray-900: rgb(17, 24, 39),
+  gray-950: rgb(3, 7, 18),
+  // Red
+  red-50: rgb(254, 242, 242),
+  red-100: rgb(254, 226, 226),
+  red-200: rgb(254, 202, 202),
+  red-300: rgb(252, 165, 165),
+  red-400: rgb(248, 113, 113),
+  red-500: rgb(239, 68, 68),
+  red-600: rgb(220, 38, 38),
+  red-700: rgb(185, 28, 28),
+  red-800: rgb(153, 27, 27),
+  red-900: rgb(127, 29, 29),
+  red-950: rgb(69, 10, 10),
+  // Orange
+  orange-50: rgb(255, 247, 237),
+  orange-100: rgb(255, 237, 213),
+  orange-200: rgb(254, 215, 170),
+  orange-300: rgb(253, 186, 116),
+  orange-400: rgb(251, 146, 60),
+  orange-500: rgb(249, 115, 22),
+  orange-600: rgb(234, 88, 12),
+  orange-700: rgb(194, 65, 12),
+  orange-800: rgb(154, 52, 18),
+  orange-900: rgb(124, 45, 18),
+  orange-950: rgb(67, 20, 7),
+  // Yellow
+  yellow-50: rgb(254, 252, 232),
+  yellow-100: rgb(254, 249, 195),
+  yellow-200: rgb(254, 240, 138),
+  yellow-300: rgb(253, 224, 71),
+  yellow-400: rgb(250, 204, 21),
+  yellow-500: rgb(236, 179, 8),
+  yellow-600: rgb(202, 138, 4),
+  yellow-700: rgb(161, 98, 7),
+  yellow-800: rgb(133, 77, 14),
+  yellow-900: rgb(113, 63, 18),
+  yellow-950: rgb(66, 32, 6),
+  // Green
+  green-50: rgb(240, 253, 244),
+  green-100: rgb(220, 252, 231),
+  green-200: rgb(187, 248, 208),
+  green-300: rgb(134, 239, 172),
+  green-400: rgb(74, 222, 128),
+  green-500: rgb(34, 197, 94),
+  green-600: rgb(22, 163, 74),
+  green-700: rgb(21, 128, 61),
+  green-800: rgb(22, 101, 52),
+  green-900: rgb(20, 83, 45),
+  green-950: rgb(5, 46, 22),
+  // Cyan
+  cyan-50: rgb(236, 254, 255),
+  cyan-100: rgb(207, 250, 254),
+  cyan-200: rgb(165, 243, 252),
+  cyan-300: rgb(103, 232, 249),
+  cyan-400: rgb(34, 211, 238),
+  cyan-500: rgb(6, 182, 212),
+  cyan-600: rgb(8, 145, 178),
+  cyan-700: rgb(14, 116, 144),
+  cyan-800: rgb(21, 94, 117),
+  cyan-900: rgb(22, 78, 99),
+  cyan-950: rgb(8, 51, 68),
+  // Blue
+  blue-50: rgb(239, 246, 255),
+  blue-100: rgb(219, 234, 254),
+  blue-200: rgb(191, 219, 254),
+  blue-300: rgb(147, 197, 253),
+  blue-400: rgb(96, 195, 250),
+  blue-500: rgb(59, 130, 246),
+  blue-600: rgb(37, 99, 235),
+  blue-700: rgb(29, 78, 216),
+  blue-800: rgb(30, 64, 175),
+  blue-900: rgb(30, 58, 138),
+  blue-950: rgb(23, 37, 84),
+  // Indigo
+  indigo-50: rgb(238, 242, 255),
+  indigo-100: rgb(224, 231, 255),
+  indigo-200: rgb(199, 210, 254),
+  indigo-300: rgb(165, 180, 252),
+  indigo-400: rgb(129, 140, 248),
+  indigo-500: rgb(99, 102, 241),
+  indigo-600: rgb(79, 70, 229),
+  indigo-700: rgb(67, 56, 202),
+  indigo-800: rgb(55, 48, 163),
+  indigo-900: rgb(49, 46, 129),
+  indigo-950: rgb(30, 27, 75),
+  // Purple
+  purple-50: rgb(245, 243, 255),
+  purple-100: rgb(237, 233, 254),
+  purple-200: rgb(221, 214, 254),
+  purple-300: rgb(196, 181, 253),
+  purple-400: rgb(167, 139, 250),
+  purple-500: rgb(139, 92, 246),
+  purple-600: rgb(124, 58, 237),
+  purple-700: rgb(109, 40, 217),
+  purple-800: rgb(91, 33, 182),
+  purple-900: rgb(76, 29, 149),
+  purple-950: rgb(46, 16, 101),
+  // Fuchsia
+  fuchsia-50: rgb(253, 244, 255),
+  fuchsia-100: rgb(250, 232, 255),
+  fuchsia-200: rgb(245, 208, 254),
+  fuchsia-300: rgb(240, 171, 252),
+  fuchsia-400: rgb(232, 121, 249),
+  fuchsia-500: rgb(217, 70, 239),
+  fuchsia-600: rgb(192, 38, 211),
+  fuchsia-700: rgb(162, 28, 175),
+  fuchsia-800: rgb(134, 25, 143),
+  fuchsia-900: rgb(112, 26, 117),
+  fuchsia-950: rgb(74, 4, 78),
+  // Pink
+  pink-50: rgb(253, 242, 248),
+  pink-100: rgb(252, 231, 243),
+  pink-200: rgb(251, 207, 232),
+  pink-300: rgb(249, 168, 212),
+  pink-400: rgb(244, 114, 182),
+  pink-500: rgb(236, 72, 153),
+  pink-600: rgb(219, 39, 119),
+  pink-700: rgb(190, 24, 93),
+  pink-800: rgb(157, 23, 77),
+  pink-900: rgb(131, 24, 67),
+  pink-950: rgb(80, 7, 36)
+);
+
+// Default theme
+$default-theme: (
+  // Colors rules
+  transparent-color: transparent,
+  inherit-color: inherit,
+  current-color: currentColor,
+
+  // Colors text
+  white-color: rgb(255, 255, 255),
+  black-color: #0c0c0e,
+  // Colors theme
+  color-background: var(--white-color),
+  color-primary: var(--black-color),
+  color-text: var(--black-color),
+  consent-radius: 0,
+  // Text
+  text-color: var(--black-color)
+);
+
+:root {
+  --fontFamily-sans: "MontserratVariable", system-ui, -apple-system,
+    BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans",
+    sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol",
+    "Noto Color Emoji";
+
+
+  @each $name, $value in $colors {
+    --#{ $name }: #{$value};
+  }
+
+  @each $name, $value in $default-theme {
+    --#{ $name }: #{$value};
+  }
+
+  @each $name, $value in $spacing {
+    --#{ $name }: #{$value};
+  }
+
+  @each $name, $value in $radius {
+    --#{ $name }: #{$value};
+  }
+
+  @each $name, $value in $shadows {
+    --#{ $name }: #{$value};
+  }
+
+  @each $name, $value in $breakpoints {
+    --#{ $name }: #{$value};
+  }
+
+  @each $name, $value in $fonts {
+    --#{ $name }: #{$value};
+  }
+
+  @each $name, $value in $ease {
+    --#{ $name }: #{$value};
+  }
+
+  @each $name, $value in $blur {
+    --#{ $name }: #{$value};
+  }
+
+  @each $name, $value in $rotate {
+    --#{ $name }: #{$value};
+  }
+}
