@@ -84,6 +84,9 @@ class AssetServices
 
     public static function enqueue_matomo_script()
     {
+        if (!get_option('wp_tracking_consent_enable_matomo')) {
+            return;
+        }
         $domain = $_SERVER['SERVER_NAME'];
         $matomoUrl = get_option('wp_tracking_consent_matomo_url');
         // Add a trailing slash if it's not present

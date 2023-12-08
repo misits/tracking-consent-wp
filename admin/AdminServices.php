@@ -49,14 +49,17 @@ class AdminServices
             "matomo_url" => get_option("wp_tracking_consent_matomo_url"),
             "token_auth" => get_option("wp_tracking_consent_token_auth"),
         );
+        $is_matom_enabled = self::is_matomo_enabled();
 ?>
         <div class="wrap">
             <h1>WP Tracking Consent</h1>
             <div class="wp-tracking-tabs">
-                <a href="#wp-tracking-consent-main" class="wp-tracking-tab-link active">
-                    <div class="wp-menu-image dashicons-before dashicons-icon-bar_chart" aria-hidden="true"><br></div><?= __("Matomo", "wp-tracking-consent"); ?>
-                </a>
-                <a href="#wp-tracking-consent-banner" class="wp-tracking-tab-link">
+                <?php if ($is_matom_enabled) { ?>
+                    <a href="#wp-tracking-consent-main" class="wp-tracking-tab-link active">
+                        <div class="wp-menu-image dashicons-before dashicons-icon-bar_chart" aria-hidden="true"><br></div><?= __("Matomo", "wp-tracking-consent"); ?>
+                    </a>
+                <?php } ?>
+                <a href="#wp-tracking-consent-banner" class="wp-tracking-tab-link <?= $is_matom_enabled ? '' : 'active' ?>">
                     <div class="wp-menu-image dashicons-before dashicons-icon-domain_verification" aria-hidden="true"><br></div><?= __("Pop-up", "wp-tracking-consent"); ?>
                 </a>
                 <a href="#wp-tracking-consent-theme" class="wp-tracking-tab-link">
@@ -67,10 +70,10 @@ class AdminServices
                 </a>
             </div>
             <div class="wp-tracking-tab-container">
-                <div class="wp-tracking-tab-content active" id="wp-tracking-consent-main">
+                <div class="wp-tracking-tab-content <?= $is_matom_enabled ? 'active' : 'hide' ?>" id="wp-tracking-consent-main">
                     <div id="wp-tracking-consent-admin" data-consent="<?= htmlentities(json_encode($consent)) ?>"></div>
                 </div>
-                <div class="wp-tracking-tab-content hide" id="wp-tracking-consent-banner">
+                <div class="wp-tracking-tab-content <?= $is_matom_enabled ? 'hide' : 'active' ?>" id="wp-tracking-consent-banner">
                     <form method="post" action="options.php" class="wp-tracking-consent-form">
                         <?php
                         settings_fields("wp-tracking-consent-banner");
@@ -269,6 +272,7 @@ class AdminServices
         );
 
         // Adding new checkbox settings for Matomo script options
+        register_setting("wp-tracking-consent-settings", "wp_tracking_consent_enable_matomo");
         register_setting("wp-tracking-consent-settings", "wp_tracking_consent_set_document_title");
         register_setting("wp-tracking-consent-settings", "wp_tracking_consent_set_cookie_domain");
         register_setting("wp-tracking-consent-settings", "wp_tracking_consent_set_domains");
@@ -276,6 +280,9 @@ class AdminServices
         register_setting("wp-tracking-consent-settings", "wp_tracking_consent_disable_cookies");
         register_setting("wp-tracking-consent-settings", "wp_tracking_consent_track_page_view");
         register_setting("wp-tracking-consent-settings", "wp_tracking_consent_enable_link_tracking");
+        register_setting("wp-tracking-consent-settings", "wp_tracking_consent_site_id");
+        register_setting("wp-tracking-consent-settings", "wp_tracking_consent_matomo_url");
+        register_setting("wp-tracking-consent-settings", "wp_tracking_consent_token_auth");
 
         add_settings_section(
             "wp-tracking-consent-settings",
@@ -284,6 +291,17 @@ class AdminServices
             "wp-tracking-consent-settings"
         );
 
+        add_settings_field(
+            "wp_tracking_consent_enable_matomo",
+            __("Enable Matomo", "wp-tracking-consent"),
+            [self::class, "render_toggle_field"],
+            "wp-tracking-consent-settings",
+            "wp-tracking-consent-settings"
+        );
+
+        if (!self::is_matomo_enabled()) {
+            return;
+        }
         add_settings_field(
             "wp_tracking_consent_token_auth",
             __("Token auth", "wp-tracking-consent"),
@@ -460,14 +478,14 @@ class AdminServices
     public static function render_site_id_field()
     {
         $value = get_option('wp_tracking_consent_site_id');
-        echo '<input type="text" placeholder="0" id="wp_tracking_consent_site_id" name="wp_tracking_consent_site_id" value="' . esc_attr($value) . '" class="large-text" required>';
+        echo '<input type="text" placeholder="0" id="wp_tracking_consent_site_id" name="wp_tracking_consent_site_id" value="' . esc_attr($value) . '" class="large-text">';
     }
 
 
     public static function render_matomo_url_field()
     {
         $value = get_option('wp_tracking_consent_matomo_url');
-        echo '<input type="text" id="wp_tracking_consent_matomo_url" placeholder="https://<your-matomo.domain>" name="wp_tracking_consent_matomo_url" value="' . esc_attr($value) . '" class="large-text" required>';
+        echo '<input type="text" id="wp_tracking_consent_matomo_url" placeholder="https://<your-matomo.domain>" name="wp_tracking_consent_matomo_url" value="' . esc_attr($value) . '" class="large-text">';
     }
 
     public static function render_background_color_field()
@@ -523,5 +541,22 @@ class AdminServices
     {
         $option = get_option($args['id']);
         echo '<input type="checkbox" id="' . esc_attr($args['id']) . '" name="' . esc_attr($args['id']) . '" value="1" ' . checked(1, $option, false) . '/>';
+    }
+
+    /**
+     * Render toggle field. as switch button
+     */
+    public static function render_toggle_field()
+    {
+        $option = get_option('wp_tracking_consent_enable_matomo');
+        if (!$option) {
+            $option = false;
+        }
+        echo '<input type="checkbox" id="wp_tracking_consent_enable_matomo" name="wp_tracking_consent_enable_matomo" value="1" ' . checked(1, $option, false) . '/>';
+    }
+
+    public static function is_matomo_enabled()
+    {
+        return get_option('wp_tracking_consent_enable_matomo');
     }
 }

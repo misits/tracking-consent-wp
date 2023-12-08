@@ -15,15 +15,15 @@ function MatomoGraph() {
     setMatomoUrl(data.matomo_url);
     if (data.token_auth.length) setTokenAuth(data.token_auth);
 
-    if (!matomoUrl.length || !siteID.length) return;
-
+    if (!matomoUrl.length && !siteID.length) return;
+    
     // set the url
     setUrl(
       `${matomoUrl}/index.php?module=Widgetize&action=iframe&moduleToWidgetize=Dashboard&actionToWidgetize=index&idSite=${siteID}&period=day&date=today&disableLink=1&widget=1&token_auth=${tokenAuth}`
     );
-  }, [siteID, matomoUrl, tokenAuth]);
+  }, [siteID, matomoUrl]);
 
-  if (!matomoUrl || !siteID) {
+  if (!url.length) {
     return (
       <>
         <div className="wp-tracking-consent__header">

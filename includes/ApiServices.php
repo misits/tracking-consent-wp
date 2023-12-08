@@ -37,6 +37,7 @@ class ApiServices
         );
 
         $consent = array(
+            "is_matomo_enabled" => get_option("wp_tracking_consent_enable_matomo", false),
             "read_more" => get_permalink(get_option('wp_tracking_consent_read_more_page', 0)),
             "accept_text" => get_option('wp_tracking_consent_accept_button', __('Accept', 'wp-tracking-consent')),
             "decline_text" => get_option('wp_tracking_consent_decline_button', __('Decline', 'wp-tracking-consent')),

@@ -15,25 +15,37 @@ function ConsentForm() {
   });
 
   const getConsentCookie = () => {
-    // check mtm_cookie_consent cookie for consent
-    const cookie = document.cookie.split(";").find((cookie) => {
-      return cookie.trim().startsWith("mtm_cookie_consent=");
-    });
+    if (typeof _paq !== "undefined") {
+      // check mtm_cookie_consent cookie for consent
+      const cookie = document.cookie.split(";").find((cookie) => {
+        return cookie.trim().startsWith("mtm_cookie_consent=");
+      });
 
-    // if cookie is found, return the value
-    if (cookie) {
-      setConsent(cookie.split("=")[1] ? true : false);
+      // if cookie is found, return the value
+      if (cookie) {
+        setConsent(cookie.split("=")[1] ? true : false);
+      }
+
+      return consent;
     }
+
+    setConsent(localStorage.getItem("consent-given") === "accepted"); // Get from local storage
+
     return consent;
   };
 
   const setConsentCookie = (userConsent) => {
+
     if (userConsent) {
-      _paq.push(["setCookieConsentGiven"]);
-      _paq.push(["rememberCookieConsentGiven"]);
+      if (typeof _paq !== "undefined") {
+        _paq.push(["setCookieConsentGiven"]);
+        _paq.push(["rememberCookieConsentGiven"]);
+      }
+      
       localStorage.setItem("consent-given", "accepted"); // Save to local storage
     } else {
-      _paq.push(["forgetCookieConsentGiven"]);
+      if (typeof _paq !== "undefined") _paq.push(["forgetCookieConsentGiven"]);
+      
       localStorage.setItem("consent-given", "refused"); // Save to local storage
 
       // Hide the cookie banner
@@ -111,6 +123,7 @@ function ConsentForm() {
 
   useEffect(() => {
     if (localStorage.getItem("consent-given")) {
+      displayConsentForm();
       return;
     }
 
