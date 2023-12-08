@@ -8,7 +8,7 @@ function MatomoGraph() {
 
   useEffect(() => {
     const data = JSON.parse(
-      document.querySelector("#wp-tracking-consent-admin").dataset.consent
+      document.querySelector("#tracking-consent-wp-admin").dataset.consent
     );
 
     setSiteID(data.site_id);
@@ -26,8 +26,8 @@ function MatomoGraph() {
   if (!url.length) {
     return (
       <>
-        <div className="wp-tracking-consent__header">
-          <h2 className="wp-tracking-consent__header__title">Missing data</h2>
+        <div className="tracking-consent-wp__header">
+          <h2 className="tracking-consent-wp__header__title">Missing data</h2>
           <p>Please check if all required fields are filed in settings tab.</p>
         </div>
       </>

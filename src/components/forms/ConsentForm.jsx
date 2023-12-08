@@ -18,7 +18,7 @@ function ConsentForm() {
     if (typeof _paq !== "undefined") {
       // check mtm_cookie_consent cookie for consent
       const cookie = document.cookie.split(";").find((cookie) => {
-        return cookie.trim().startsWith("mtm_cookie_consent=");
+        return cookie.trim().startsWith("mtm_cookie_consent=") || false;
       });
 
       // if cookie is found, return the value
@@ -49,7 +49,7 @@ function ConsentForm() {
       localStorage.setItem("consent-given", "refused"); // Save to local storage
 
       // Hide the cookie banner
-      const element = document.getElementById(`wp-tracking-consent-front`);
+      const element = document.getElementById(`tracking-consent-wp-front`);
       element.classList.remove("visible");
       element.classList.add("hidden");
       setTimeout(() => {
@@ -66,7 +66,7 @@ function ConsentForm() {
 
   // Logic to display or hide the consent form based on cookie
   const displayConsentForm = () => {
-    const element = document.getElementById(`wp-tracking-consent-front`);
+    const element = document.getElementById(`tracking-consent-wp-front`);
     if (!element) return;
     if (!getConsentCookie()) {
       // await 1 second before showing the consent form
@@ -87,7 +87,7 @@ function ConsentForm() {
 
   useEffect(() => {
     // Fetch theme settings only once on component mount
-    fetch("/wp-json/wp-tracking-consent/v1/settings", {
+    fetch("/wp-json/tracking-consent-wp/v1/settings", {
       method: "GET",
       headers: {
         "Content-Type": "application/json",
@@ -174,10 +174,10 @@ function ConsentForm() {
               : "Reject"}
           </button>
         </div>
-        {consentData && (
+        {consentData && consentData.read_more && (
           <div className="form-fields">
             <a
-              href={consentData.read_more}
+              href={consentData.read_more ? consentData.read_more : "#"}
               className={`button button--secondary button--icon ${
                 theme ? theme.button_class : ""
               } `}

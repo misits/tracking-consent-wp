@@ -1,0 +1,166 @@
+# Copyright (C) 2023 Martin IS IT Services
+# This file is distributed under the MIT License.
+msgid ""
+msgstr ""
+"Project-Id-Version: Tracking Consent WP 1.0\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/tracking-consent-"
+"wp\n"
+"Last-Translator: \n"
+"Language-Team: Français\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2023-12-08T10:36:10+00:00\n"
+"PO-Revision-Date: 2023-12-08 10:42+0000\n"
+"X-Generator: Loco https://localise.biz/\n"
+"X-Domain: tracking-consent-wp\n"
+"Language: fr_FR\n"
+"Plural-Forms: nplurals=2; plural=n > 1;\n"
+"X-Loco-Version: 2.6.6; wp-6.4.2"
+
+#. Plugin Name of the plugin
+msgid "Tracking Consent WP"
+msgstr "Suivi du consentement WP"
+
+#. Plugin URI of the plugin
+msgid "https://github.com/misits/tracking-consent-wp"
+msgstr "https://github.com/misits/tracking-consent-wp"
+
+#. Description of the plugin
+msgid "Adds Matomo tracking code with consent functionality and more."
+msgstr ""
+"Ajoute le code de suivi Matomo avec fonctionnalité de consentement et plus "
+"encore."
+
+#. Author of the plugin
+msgid "Martin IS IT Services"
+msgstr "Martin IS IT Services"
+
+#. Author URI of the plugin
+msgid "https://misits.ch"
+msgstr "https://misits.ch"
+
+#: admin/AdminServices.php:59
+msgid "Matomo"
+msgstr "Matomo"
+
+#: admin/AdminServices.php:63
+msgid "Pop-up"
+msgstr "Pop-up"
+
+#: admin/AdminServices.php:66
+msgid "Theme"
+msgstr "Theme"
+
+#: admin/AdminServices.php:69
+msgid "Settings"
+msgstr "Paramètres"
+
+#: admin/AdminServices.php:72
+msgid "Donation"
+msgstr "Donation"
+
+#: admin/AdminServices.php:183
+msgid "Description"
+msgstr "Description"
+
+#: admin/AdminServices.php:191
+msgid "Accept Button Text"
+msgstr "Text du bouton accepter"
+
+#: admin/AdminServices.php:199
+msgid "Decline Button Text"
+msgstr "Texte du bouton refuser"
+
+#: admin/AdminServices.php:207
+msgid "Read More Page"
+msgstr "Page de politique de confidentialité"
+
+#: admin/AdminServices.php:231
+msgid "Background Color"
+msgstr "Couleur de l'arrière plan"
+
+#: admin/AdminServices.php:239
+msgid "Text Color"
+msgstr "Couleur du texte"
+
+#: admin/AdminServices.php:247
+msgid "Primary Color"
+msgstr "Couleur primaire"
+
+#: admin/AdminServices.php:255
+msgid "Banner Class"
+msgstr "Classe de bannière"
+
+#: admin/AdminServices.php:263
+msgid "Button Class"
+msgstr "Classe des boutons"
+
+#: admin/AdminServices.php:271
+msgid "Radius"
+msgstr "Radius"
+
+#: admin/AdminServices.php:299
+msgid "Enable Matomo"
+msgstr "Activer Matomo"
+
+#: admin/AdminServices.php:310
+msgid "Token auth"
+msgstr "Token auth"
+
+#: admin/AdminServices.php:318
+msgid "Site ID"
+msgstr "Site ID"
+
+#: admin/AdminServices.php:326
+msgid "Matomo URL"
+msgstr "Matomo URL"
+
+#: admin/AdminServices.php:334
+msgid "Set Document Title"
+msgstr "Définir le titre du document"
+
+#: admin/AdminServices.php:346
+msgid "Set Cookie Domain"
+msgstr "Définir le domaine des cookies"
+
+#: admin/AdminServices.php:358
+msgid "Set Domains"
+msgstr "Définir les domaines"
+
+#: admin/AdminServices.php:370
+msgid "Set Do Not Track"
+msgstr "Définir ne pas suivre"
+
+#: admin/AdminServices.php:382
+msgid "Disable Cookies"
+msgstr "Désactiver les cookies"
+
+#: admin/AdminServices.php:394
+msgid "Track Page View"
+msgstr "Suivi de la vue de la page"
+
+#: admin/AdminServices.php:406
+msgid "Enable Link Tracking"
+msgstr "Activer le suivi des liens"
+
+#: admin/AdminServices.php:421
+msgid ""
+"We use cookies to ensure that we give you the best experience on our website."
+" If you continue to use this site we will assume that you are happy with it."
+msgstr ""
+"Nous utilisons des cookies pour garantir que nous vous offrons la meilleure "
+"expérience sur notre site Web. Si vous continuez à utiliser ce site, nous "
+"supposerons que vous en êtes satisfait."
+
+#: admin/AdminServices.php:443
+msgid "Accept"
+msgstr "Accepter"
+
+#: admin/AdminServices.php:452
+msgid "Decline"
+msgstr "Refuser"
+
+#: admin/AdminServices.php:461
+msgid "Select a page"
+msgstr "Sélectionnez une page"

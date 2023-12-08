@@ -1,11 +1,11 @@
-.toplevel_page_wp-tracking-consent {
+.toplevel_page_tracking-consent-wp {
     #wpbody-content {
         padding-bottom: 0;
     }
 
 }
 
-.wp-tracking-consent-form {
+.tracking-consent-wp-form {
     width: 100%;
 
     .form-table {
@@ -63,21 +63,21 @@
 
     }
 
-    #wp_tracking_consent_read_more_page {
+    #tracking_consent_wp_read_more_page {
         width: 100%;
         min-width: 100%;
         border-color: #dcdcde;
     }
 }
 
-.wp-tracking-tabs {
+.tracking-tabs {
     background-color: var(--white-color);
     padding: var(--space-4);
     border-radius: var(--radius-md);
     margin-bottom: var(--space-4);
     display: flex;
 
-    .wp-tracking-tab-link {
+    .tracking-tab-link {
         display: inline-flex;
         align-items: center;
         padding: 0 var(--space-2);
@@ -125,7 +125,7 @@
     }
 }
 
-.wp-tracking-tab-container {
+.tracking-tab-container {
     background-color: var(--white-color);
     padding: var(--space-4);
     border-radius: var(--radius-md);
@@ -140,7 +140,7 @@
         display: none;
     }
 
-    .wp-tracking-tab-content {
+    .tracking-tab-content {
         &.hide {
             display: none;
         }
@@ -151,7 +151,7 @@
     }
 }
 
-#wp-tracking-consent-admin {
+#tracking-consent-wp-admin {
     display: flex;
     flex-direction: column;
 
@@ -159,7 +159,7 @@
         min-height: 75vh;
     }
 
-    .wp-tracking-consent {
+    .tracking-consent-wp {
         &__header {
             &__title {
                 margin-top: var(--space-0);

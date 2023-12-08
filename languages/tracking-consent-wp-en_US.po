@@ -1,0 +1,163 @@
+# Copyright (C) 2023 Martin IS IT Services
+# This file is distributed under the MIT License.
+msgid ""
+msgstr ""
+"Project-Id-Version: Tracking Consent WP 1.0\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/tracking-consent-"
+"wp\n"
+"Last-Translator: \n"
+"Language-Team: English (United States)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2023-12-08T10:36:10+00:00\n"
+"PO-Revision-Date: 2023-12-08 10:46+0000\n"
+"X-Generator: Loco https://localise.biz/\n"
+"X-Domain: tracking-consent-wp\n"
+"Language: en_US\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Loco-Version: 2.6.6; wp-6.4.2"
+
+#. Plugin Name of the plugin
+msgid "Tracking Consent WP"
+msgstr "Tracking Consent WP"
+
+#. Plugin URI of the plugin
+msgid "https://github.com/misits/tracking-consent-wp"
+msgstr "https://github.com/misits/tracking-consent-wp"
+
+#. Description of the plugin
+msgid "Adds Matomo tracking code with consent functionality and more."
+msgstr "Adds Matomo tracking code with consent functionality and more."
+
+#. Author of the plugin
+msgid "Martin IS IT Services"
+msgstr "Martin IS IT Services"
+
+#. Author URI of the plugin
+msgid "https://misits.ch"
+msgstr "https://misits.ch"
+
+#: admin/AdminServices.php:59
+msgid "Matomo"
+msgstr "Matomo"
+
+#: admin/AdminServices.php:63
+msgid "Pop-up"
+msgstr "Pop-up"
+
+#: admin/AdminServices.php:66
+msgid "Theme"
+msgstr "Theme"
+
+#: admin/AdminServices.php:69
+msgid "Settings"
+msgstr "Settings"
+
+#: admin/AdminServices.php:72
+msgid "Donation"
+msgstr "Donation"
+
+#: admin/AdminServices.php:183
+msgid "Description"
+msgstr "Description"
+
+#: admin/AdminServices.php:191
+msgid "Accept Button Text"
+msgstr "Accept button text"
+
+#: admin/AdminServices.php:199
+msgid "Decline Button Text"
+msgstr "Decline button text"
+
+#: admin/AdminServices.php:207
+msgid "Read More Page"
+msgstr "Privacy Policy page"
+
+#: admin/AdminServices.php:231
+msgid "Background Color"
+msgstr "Background color"
+
+#: admin/AdminServices.php:239
+msgid "Text Color"
+msgstr "Text color"
+
+#: admin/AdminServices.php:247
+msgid "Primary Color"
+msgstr "Primary color"
+
+#: admin/AdminServices.php:255
+msgid "Banner Class"
+msgstr "Banner class"
+
+#: admin/AdminServices.php:263
+msgid "Button Class"
+msgstr "Button class"
+
+#: admin/AdminServices.php:271
+msgid "Radius"
+msgstr "Radius"
+
+#: admin/AdminServices.php:299
+msgid "Enable Matomo"
+msgstr "Enable Matomo"
+
+#: admin/AdminServices.php:310
+msgid "Token auth"
+msgstr "Token auth"
+
+#: admin/AdminServices.php:318
+msgid "Site ID"
+msgstr "Site ID"
+
+#: admin/AdminServices.php:326
+msgid "Matomo URL"
+msgstr "Matomo URL"
+
+#: admin/AdminServices.php:334
+msgid "Set Document Title"
+msgstr "Set document title"
+
+#: admin/AdminServices.php:346
+msgid "Set Cookie Domain"
+msgstr "Set cookie domain"
+
+#: admin/AdminServices.php:358
+msgid "Set Domains"
+msgstr "Set domains"
+
+#: admin/AdminServices.php:370
+msgid "Set Do Not Track"
+msgstr "Set do not track"
+
+#: admin/AdminServices.php:382
+msgid "Disable Cookies"
+msgstr "Disable cookies"
+
+#: admin/AdminServices.php:394
+msgid "Track Page View"
+msgstr "Track page view"
+
+#: admin/AdminServices.php:406
+msgid "Enable Link Tracking"
+msgstr "Enable link tracking"
+
+#: admin/AdminServices.php:421
+msgid ""
+"We use cookies to ensure that we give you the best experience on our website."
+" If you continue to use this site we will assume that you are happy with it."
+msgstr ""
+"We use cookies to ensure that we give you the best experience on our website."
+" If you continue to use this site we will assume that you are happy with it."
+
+#: admin/AdminServices.php:443
+msgid "Accept"
+msgstr "Accept"
+
+#: admin/AdminServices.php:452
+msgid "Decline"
+msgstr "Decline"
+
+#: admin/AdminServices.php:461
+msgid "Select a page"
+msgstr "Select a page"

@@ -2,21 +2,21 @@
 /**
  * Plugin Name: Tracking Consent WP
  * Description: Adds Matomo tracking code with consent functionality and more.
- * Plugin URI: https://github.com/misits/wp-tracking-consent
+ * Plugin URI: https://github.com/misits/tracking-consent-wp
  * Version: 1.0
  * Requires at least: 5.2
  * Requires PHP: 8.0
  * Author: Martin IS IT Services
  * Author URI: https://misits.ch
  * License: MIT License
- * Text Domain: wp-tracking-consent
+ * Text Domain: tracking-consent-wp
  * Domain Path: /languages
  */
-namespace WPTrackingConsent;
+namespace TrackingConsentWP;
 
-use WPTrackingConsent\includes\AssetServices;
-use WPTrackingConsent\includes\ApiServices;
-use WPTrackingConsent\admin\AdminServices;
+use TrackingConsentWP\includes\AssetServices;
+use TrackingConsentWP\includes\ApiServices;
+use TrackingConsentWP\admin\AdminServices;
 
 // Autoload classes.
 spl_autoload_register(function ($class) {
@@ -32,9 +32,9 @@ spl_autoload_register(function ($class) {
 
 // Load textdomain.
 function custom_load_textdomain() {
-    load_plugin_textdomain( 'wp-tracking-consent', false, basename( dirname( __FILE__ ) ) . '/languages/' );
+    load_plugin_textdomain( 'tracking-consent-wp', false, basename( dirname( __FILE__ ) ) . '/languages/' );
 }
-add_action( 'plugins_loaded', 'WPTrackingConsent\\custom_load_textdomain' );
+add_action( 'plugins_loaded', 'TrackingConsentWP\\custom_load_textdomain' );
 
 // Register classes.
 $to_register = [

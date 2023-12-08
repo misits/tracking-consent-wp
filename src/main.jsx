@@ -10,12 +10,12 @@ let appToRender = document.querySelector('.wp-admin') ? 'admin' : 'front';
 let rootElement;
 if (appToRender !== 'admin') {
   rootElement = document.createElement('div')
-  rootElement.id = 'wp-tracking-consent-' + appToRender;
+  rootElement.id = 'tracking-consent-wp-' + appToRender;
   document.body.appendChild(rootElement);
 }
 
 // Render the app
-const root = document.getElementById('wp-tracking-consent-' + appToRender);
+const root = document.getElementById('tracking-consent-wp-' + appToRender);
 
 if (root) {
   ReactDOM.createRoot(root).render(
