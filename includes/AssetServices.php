@@ -11,6 +11,7 @@ class AssetServices
     {
         add_action("wp_enqueue_scripts", [self::class, "enqueue_styles"]);
         add_action("wp_enqueue_scripts", [self::class, "enqueue_scripts"]);
+        add_action("wp_enqueue_scripts", [self::class, "enqueue_matomo_script"]);
         add_action("admin_enqueue_scripts", [self::class, "enqueue_styles"]);
         add_action("admin_enqueue_scripts", [self::class, "enqueue_scripts"]);
         add_filter("script_loader_tag", [self::class, "loader"], 10, 2);
@@ -20,6 +21,7 @@ class AssetServices
     {
         remove_action("wp_enqueue_scripts", [self::class, "enqueue_styles"]);
         remove_action("wp_enqueue_scripts", [self::class, "enqueue_scripts"]);
+        remove_action("wp_enqueue_scripts", [self::class, "enqueue_matomo_script"]);
         remove_action("admin_enqueue_scripts", [self::class, "enqueue_styles"]);
         remove_action("admin_enqueue_scripts", [self::class, "enqueue_scripts"]);
         remove_filter("script_loader_tag", [self::class, "loader"], 10, 2);
@@ -46,7 +48,7 @@ class AssetServices
     }
 
     public static function enqueue_scripts()
-    {   
+    {
         $head = is_admin() ? 'admin_head' : 'wp_head';
 
         if (self::is_vite_running()) {
@@ -80,16 +82,64 @@ class AssetServices
         }
     }
 
+    public static function enqueue_matomo_script()
+    {
+        if (!get_option('wp_tracking_consent_enable_matomo')) {
+            return;
+        }
+        $domain = $_SERVER['SERVER_NAME'];
+        $matomoUrl = get_option('wp_tracking_consent_matomo_url');
+        // Add a trailing slash if it's not present
+        $matomoUrl = rtrim($matomoUrl, '/') . '/';
+
+        echo '<!-- Matomo -->';
+        echo '<script>';
+        echo 'var _paq = window._paq = window._paq || [];';
+        echo '/* tracker methods like "setCustomDimension" should be called before "trackPageView" */';
+        /*  Options  */
+        if (get_option('wp_tracking_consent_set_document_title')) {
+            echo '_paq.push(["setDocumentTitle", document.domain + "/" + document.title]);';
+        }
+        if (get_option('wp_tracking_consent_set_cookie_domain')) {
+            echo '_paq.push(["setCookieDomain", "*.' . $domain . '"]);';
+        }
+        if (get_option('wp_tracking_consent_set_domains')) {
+            echo '_paq.push(["setDomains", ["*.' . $domain . '"]]);';
+        }
+        if (get_option('wp_tracking_consent_set_do_not_track')) {
+            echo '_paq.push(["setDoNotTrack", true]);';
+        }
+        if (get_option('wp_tracking_consent_disable_cookies')) {
+            echo '_paq.push(["disableCookies"]);';
+        }
+        if (get_option('wp_tracking_consent_track_page_view', true)) {
+            echo '_paq.push(["trackPageView"]);';
+        }
+        if (get_option('wp_tracking_consent_enable_link_tracking', true)) {
+            echo '_paq.push(["enableLinkTracking"]);';
+        }
+        /* End Options */
+        echo '_paq.push(["requireCookieConsent"]);';
+        echo '(function() {';
+        echo '    var u="'. $matomoUrl .'";';
+        echo '    _paq.push(["setTrackerUrl", u+"matomo.php"]);';
+        echo '    _paq.push(["setSiteId", "'. get_option('wp_tracking_consent_site_id') . '"]);';
+        echo '    var d=document, g=d.createElement("script"), s=d.getElementsByTagName("script")[0];';
+        echo '    g.async=true; g.src=u+"matomo.js"; s.parentNode.insertBefore(g,s);';
+        echo '})();';
+        echo '</script>';
+        echo '<!-- End Matomo Code -->';
+    }
 
     private static function is_vite_running()
     {
-        $vite_server = @fsockopen('localhost', 5173, $errno, $errstr, 1);
-        if (!$vite_server) {
-            return false;
-        } else {
-            fclose($vite_server);
+        $dev_file = plugin_dir_path(dirname(__FILE__, 1)) . ".dev";
+
+        if (file_exists($dev_file)) {
             return true;
         }
+
+        return false;
     }
 
     private static function enqueue_production_scripts()

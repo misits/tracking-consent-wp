@@ -13,19 +13,30 @@ if (!defined('WP_UNINSTALL_PLUGIN')) {
 
 // Delete options created by the plugin
 $options = [
-    'wp_tracking_consent_site_id',
-    'wp_tracking_consent_matomo_url',
-    'wp_tracking_consent_token_auth',
+    // Banner
     'wp_tracking_consent_description',
     'wp_tracking_consent_accept_button',
     'wp_tracking_consent_decline_button',
     'wp_tracking_consent_read_more_page',
-    'wp_tracking_consent_theme_background_color',
-    'wp_tracking_consent_theme_text_color',
-    'wp_tracking_consent_theme_primary_color',
-    'wp_tracking_consent_theme_banner_class',
-    'wp_tracking_consent_theme_button_class',
-    'wp_tracking_consent_theme_radius',
+    // Theme
+    'wp_tracking_consent_background_color',
+    'wp_tracking_consent_text_color',
+    'wp_tracking_consent_primary_color',
+    'wp_tracking_consent_banner_class',
+    'wp_tracking_consent_button_class',
+    'wp_tracking_consent_radius',
+    // Setting
+    'wp_tracking_consent_enable_matomo',
+    'wp_tracking_consent_site_id',
+    'wp_tracking_consent_matomo_url',
+    'wp_tracking_consent_token_auth',
+    'wp_tracking_consent_set_document_title',
+    'wp_tracking_consent_set_cookie_domain',
+    'wp_tracking_consent_set_domains',
+    'wp_tracking_consent_set_do_not_track',
+    'wp_tracking_consent_disable_cookies',
+    'wp_tracking_consent_track_page_view',
+    'wp_tracking_consent_enable_link_tracking'
 ];
 
 foreach ($options as $option) {

@@ -28,15 +28,16 @@ class ApiServices
     public static function get_settings()
     {
         $theme = array(
-            "background_color" => get_option("wp_tracking_consent_theme_background_color", "#ffffff"),
-            "text_color" => get_option("wp_tracking_consent_theme_text_color", "#000000"),
-            "primary_color" => get_option("wp_tracking_consent_theme_primary_color", "#000000"),
-            "banner_class" => get_option("wp_tracking_consent_theme_banner_class", ""),
-            "button_class" => get_option("wp_tracking_consent_theme_button_class", ""),
-            "radius" => get_option("wp_tracking_consent_theme_radius", "0"),
+            "background_color" => get_option("wp_tracking_consent_background_color", "#ffffff"),
+            "text_color" => get_option("wp_tracking_consent_text_color", "#000000"),
+            "primary_color" => get_option("wp_tracking_consent_primary_color", "#000000"),
+            "banner_class" => get_option("wp_tracking_consent_banner_class", ""),
+            "button_class" => get_option("wp_tracking_consent_button_class", ""),
+            "radius" => get_option("wp_tracking_consent_radius", "0"),
         );
 
         $consent = array(
+            "is_matomo_enabled" => get_option("wp_tracking_consent_enable_matomo", false),
             "read_more" => get_permalink(get_option('wp_tracking_consent_read_more_page', 0)),
             "accept_text" => get_option('wp_tracking_consent_accept_button', __('Accept', 'wp-tracking-consent')),
             "decline_text" => get_option('wp_tracking_consent_decline_button', __('Decline', 'wp-tracking-consent')),

@@ -7,11 +7,4 @@ services:
     container_name: node-wp-tracking-conscent
     volumes:
       - ./:/app/
-    command: tail -f /dev/null
-    ports:
-      - '5173:5173'
-    networks:
-      - node-laboratory
-
-networks:
-  node-laboratory:
+    command: yarn build
