@@ -3,7 +3,7 @@
 ## Donate
 If you like this plugin, please consider making a donation to support its development:
 
-[![Donate](https://img.shields.io/badge/Donate-PayPal-blue.svg)](https://www.paypal.com/donate/?hosted_button_id=8YDDNMSELC5CS) [![Download](https://img.shields.io/badge/Download-Wordpress.org-blue.svg)](https://wordpress.org/plugins/wp-tracking-consent/)
+[![Donate](https://img.shields.io/badge/Donate-PayPal-blue.svg)](https://www.paypal.com/donate/?hosted_button_id=8YDDNMSELC5CS) [![Download](https://img.shields.io/badge/Download-Wordpress.org-blue.svg)](https://wordpress.org/plugins/tracking-consent-wp/)
 
 
 ## Description
@@ -16,7 +16,7 @@ The WP Tracking Consent Plugin adds Matomo tracking code to your WordPress site 
 - Admin settings for managing tracking details and consent form appearance.
 
 ## Installation
-1. Upload the `wp-tracking-consent` folder to the `/wp-content/plugins/` directory.
+1. Upload the `tracking-consent-wp` folder to the `/wp-content/plugins/` directory.
 2. Activate the plugin through the 'Plugins' menu in WordPress.
 3. Go to 'WP Tracking Consent' in the admin menu to configure the plugin.
 
