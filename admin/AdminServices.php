@@ -68,6 +68,9 @@ class AdminServices
                 <a href="#wp-tracking-consent-advanced" class="wp-tracking-tab-link">
                     <div class="wp-menu-image dashicons-before dashicons-icon-tune" aria-hidden="true"><br></div><?= __("Settings", "wp-tracking-consent"); ?>
                 </a>
+                <a href="https://www.paypal.com/donate/?hosted_button_id=8YDDNMSELC5CS" class="wp-tracking-tab-link wp-tracking-tab-link--donation">
+                    <div class="wp-menu-image dashicons-before dashicons-icon-volunteer_activism" aria-hidden="true"><br></div><?= __("Donation", "wp-tracking-consent"); ?>
+                </a>
             </div>
             <div class="wp-tracking-tab-container">
                 <div class="wp-tracking-tab-content <?= $is_matom_enabled ? 'active' : 'hide' ?>" id="wp-tracking-consent-main">

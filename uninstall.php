@@ -26,6 +26,7 @@ $options = [
     'wp_tracking_consent_button_class',
     'wp_tracking_consent_radius',
     // Setting
+    'wp_tracking_consent_enable_matomo',
     'wp_tracking_consent_site_id',
     'wp_tracking_consent_matomo_url',
     'wp_tracking_consent_token_auth',

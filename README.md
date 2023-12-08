@@ -1,5 +1,11 @@
 # WP Tracking Consent Plugin
 
+## Donate
+If you like this plugin, please consider making a donation to support its development:
+
+[![Donate](https://img.shields.io/badge/Donate-PayPal-blue.svg)](https://www.paypal.com/donate/?hosted_button_id=8YDDNMSELC5CS) [![Download](https://img.shields.io/badge/Download-Wordpress.org-blue.svg)](https://wordpress.org/plugins/wp-tracking-consent/)
+
+
 ## Description
 The WP Tracking Consent Plugin adds Matomo tracking code to your WordPress site with user consent functionality. It provides an easy-to-use interface for managing consent settings and integrates seamlessly with Matomo Analytics.
 
@@ -35,4 +41,4 @@ Yes, the plugin offers options to customize the colors, text, and more.
 For support, please visit <hello@misits.ch>.
 
 ## License
-This plugin is licensed under the MIT License.
+This plugin is licensed under the GPLv2 or later.
