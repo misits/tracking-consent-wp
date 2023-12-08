@@ -1,6 +1,6 @@
 <?php
 /**
- * Plugin Name: WP Tracking Consent
+ * Plugin Name: Tracking Consent WP
  * Description: Adds Matomo tracking code with consent functionality and more.
  * Plugin URI: https://github.com/misits/wp-tracking-consent
  * Version: 1.0
