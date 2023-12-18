@@ -1,7 +1,10 @@
 {
   "name": "wp-tracking-consent",
-  "private": true,
-  "version": "0.0.0",
+  "private": false,
+  "description": "A WordPress plugin to add a tracking consent banner to your website.",
+  "author": "Martin IS IT Services (Misits)",
+  "license": "GPL-2.0-or-later",
+  "version": "1.0.1",
   "type": "module",
   "scripts": {
     "dev": "vite",

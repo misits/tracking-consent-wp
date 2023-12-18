@@ -52,6 +52,10 @@ Yes, the plugin offers customizable options for the consent form including text,
 
 == Changelog ==
 
+= 1.0.1 =
+
+- Fix unsinstall hook.
+
 = 1.0 =
 
 - Initial release.

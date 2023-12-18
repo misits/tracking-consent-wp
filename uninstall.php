@@ -42,14 +42,3 @@ $options = [
 foreach ($options as $option) {
     delete_option($option);
 }
-
-// Unregister services created by the plugin
-$services = [
-    AssetServices::class,
-    AdminServices::class,
-    ApiServices::class,
-];
-
-foreach ($services as $service) {
-    $service::unregister();
-}
