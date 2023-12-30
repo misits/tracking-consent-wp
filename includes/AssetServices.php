@@ -150,7 +150,7 @@ class AssetServices
         foreach ($files as $file) {
             if (preg_match('/\.js$/', $file)) {
                 wp_enqueue_script(
-                    "vite-" . basename($file, ".js"),
+                    "tracking-consent-wp-" . basename($file, ".js"),
                     plugins_url("/dist/assets/js/" . $file, dirname(__FILE__, 1)),
                     [],
                     null,
@@ -159,7 +159,7 @@ class AssetServices
                 add_filter(
                     "script_loader_tag",
                     function ($tag, $handle, $src) use ($file) {
-                        if ($handle === "vite-" . basename($file, ".js")) {
+                        if ($handle === "tracking-consent-wp-" . basename($file, ".js")) {
                             $tag = '<script type="module" src="' . esc_url($src) . '"></script>';
                         }
                         return $tag;
