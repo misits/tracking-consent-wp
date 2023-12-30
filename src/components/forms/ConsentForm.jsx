@@ -68,7 +68,7 @@ function ConsentForm() {
   const displayConsentForm = () => {
     const element = document.getElementById(`tracking-consent-wp-front`);
     if (!element) return;
-    if (!getConsentCookie()) {
+    if (!getConsentCookie() && !localStorage.getItem("consent-given")) {
       // await 1 second before showing the consent form
       setTimeout(() => {
         element.classList.add("visible");
