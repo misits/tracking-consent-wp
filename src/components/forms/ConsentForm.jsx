@@ -100,12 +100,12 @@ function ConsentForm() {
         // update css variables
         const root = document.documentElement;
         root.style.setProperty(
-          "--color-background",
+          "--tcwp-color-background",
           theme.background_color || "#fff"
         );
-        root.style.setProperty("--color-text", theme.text_color || "#000");
+        root.style.setProperty("--tcwp-color-text", theme.text_color || "#000");
         root.style.setProperty(
-          "--color-primary",
+          "--tcwp-color-primary",
           theme.primary_color || "#000"
         );
         root.style.setProperty(

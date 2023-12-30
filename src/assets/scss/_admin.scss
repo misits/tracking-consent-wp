@@ -52,12 +52,12 @@
         cursor: pointer;
         transition: color 0.2s var(--ease), background-color 0.2s var(--ease);
         text-decoration: none;
-        color: var(--white-color);
+        color: var(--tcwp-white-color);
         background-color: #2271b1;
         font-weight: var(--font-weight-medium);
 
         &:hover {
-            background-color: var(--white-color);
+            background-color: var(--tcwp-white-color);
             color: #2271b1;
         }
 
@@ -71,7 +71,7 @@
 }
 
 .tracking-tabs {
-    background-color: var(--white-color);
+    background-color: var(--tcwp-white-color);
     padding: var(--space-4);
     border-radius: var(--radius-md);
     margin-bottom: var(--space-4);
@@ -86,7 +86,7 @@
         cursor: pointer;
         transition: color 0.2s var(--ease), background-color 0.2s var(--ease);
         text-decoration: none;
-        color: var(--white-color);
+        color: var(--tcwp-white-color);
         border: 1px solid #2271b1;
         background-color: #2271b1;
         font-size: var(--text-sm);
@@ -101,7 +101,7 @@
         }
 
         &:hover {
-            background-color: var(--white-color);
+            background-color: var(--tcwp-white-color);
             color: #2271b1;
 
             .dashicons-before {
@@ -112,7 +112,7 @@
         }
 
         &.active {
-            background-color: var(--white-color);
+            background-color: var(--tcwp-white-color);
             color: #2271b1;
             border: 1px solid #2271b1;
 
@@ -126,7 +126,7 @@
 }
 
 .tracking-tab-container {
-    background-color: var(--white-color);
+    background-color: var(--tcwp-white-color);
     padding: var(--space-4);
     border-radius: var(--radius-md);
     overflow-y: scroll;

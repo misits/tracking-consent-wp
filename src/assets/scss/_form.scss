@@ -6,8 +6,8 @@
     box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
     border-radius: var(--consent-radius, 0);
     max-width: var(--phone);
-    background-color: var(--color-background, #fff);
-    color: var(--color-text, #000);
+    background-color: var(--tcwp-color-background, #fff);
+    color: var(--tcwp-color-text, #000);
     opacity: 0;  // Initially not visible
     transform: translateY(110%); // Start below its final position
     transition: opacity 0.5s ease, transform 0.5s ease; // Animation effect
@@ -47,9 +47,9 @@
 
             .button {
                 margin-right: var(--space-2);
-                border: 1px solid var(--color-primary, #000);
-                color: var(--white-color);
-                background-color: var(--color-primary, #000);
+                border: 1px solid var(--tcwp-color-primary, #000);
+                color: var(--tcwp-white-color);
+                background-color: var(--tcwp-color-primary, #000);
                 border-radius: var(--consent-radius, 0);
                 padding: var(--space-1) var(--space-3); 
                 font-size: var(--font-size-sm);
@@ -57,19 +57,19 @@
                 transition: color 0.2s var(--ease), background-color 0.2s var(--ease);
 
                 &:hover {
-                    background-color: var(--white-color);
-                    color: var(--color-primary, #000);
+                    background-color: var(--tcwp-white-color);
+                    color: var(--tcwp-color-primary, #000);
                 }
 
                 // invert colors for secondary button
                 &--secondary {
-                    border: 1px solid var(--color-text, #000);
-                    color: var(--color-text, #000);
-                    background-color: var(--white-color);
+                    border: 1px solid var(--tcwp-color-text, #000);
+                    color: var(--tcwp-color-text, #000);
+                    background-color: var(--tcwp-white-color);
 
                     &:hover {
-                        background-color: var(--color-text, #000);
-                        color: var(--white-color);
+                        background-color: var(--tcwp-color-text, #000);
+                        color: var(--tcwp-white-color);
                     }
                 }
 

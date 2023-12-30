@@ -122,8 +122,8 @@ $spacing: (
   space-px: 1px,
   space-auto: 0 auto,
   // Grid
-  global-grid: 1280px,
-  global-margin: 20px
+  tcwp-global-grid: 1280px,
+  tcwp-global-margin: 20px
 );
 
 // Radius
@@ -299,15 +299,15 @@ $default-theme: (
   current-color: currentColor,
 
   // Colors text
-  white-color: rgb(255, 255, 255),
-  black-color: #0c0c0e,
+  tcwp-white-color: rgb(255, 255, 255),
+  tcwp-black-color: #0c0c0e,
   // Colors theme
-  color-background: var(--white-color),
-  color-primary: var(--black-color),
-  color-text: var(--black-color),
+  tcwp-color-background: var(--tcwp-white-color),
+  tcwp-color-primary: var(--tcwp-black-color),
+  tcwp-color-text: var(--tcwp-black-color),
   consent-radius: 0,
   // Text
-  text-color: var(--black-color)
+  tcwp-text-color: var(--tcwp-black-color)
 );
 
 :root {
