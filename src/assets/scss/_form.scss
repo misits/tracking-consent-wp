@@ -13,6 +13,11 @@
     transition: opacity 0.5s ease, transform 0.5s ease; // Animation effect
     z-index: 9999;
 
+    @media screen and (max-width: $small) {
+        margin: 0;
+        border-radius: 0;
+    }
+
     &.visible {
         opacity: 1; // Fully visible
         transform: translateY(0); // Move to final position
@@ -44,7 +49,6 @@
             align-items: center;
             margin-top: var(--space-4);
 
-
             .button {
                 margin-right: var(--space-2);
                 border: 1px solid var(--tcwp-color-primary, #000);
@@ -55,6 +59,9 @@
                 font-size: var(--font-size-sm);
                 cursor: pointer;
                 transition: color 0.2s var(--ease), background-color 0.2s var(--ease);
+                white-space: nowrap;
+                font-size: var(--text-sm);
+                height: 30px;
 
                 &:hover {
                     background-color: var(--tcwp-white-color);
