@@ -11,6 +11,7 @@
     opacity: 0;  // Initially not visible
     transform: translateY(110%); // Start below its final position
     transition: opacity 0.5s ease, transform 0.5s ease; // Animation effect
+    z-index: 9999;
 
     &.visible {
         opacity: 1; // Fully visible
